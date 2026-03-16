@@ -1,0 +1,19 @@
+{
+  "name": "happy-birthday",
+  "version": "1.0.0",
+  "description": "Interactive birthday invitation",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": ["birthday", "invitation"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
