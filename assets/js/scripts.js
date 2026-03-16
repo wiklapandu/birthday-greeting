@@ -224,6 +224,11 @@
         const env = document.getElementById('envelope');
         if (env.classList.contains('open')) return;
         env.classList.add('open'); spawnFx(50, 'fall');
+        // Play birthday music
+        const musicEl = document.getElementById('birthday-music');
+        if (musicEl) {
+            musicEl.play().catch(err => console.log('Could not play music:', err));
+        }
         setTimeout(nextScene, 1700);
     }
 
@@ -431,6 +436,8 @@
         f('wa-mic', e => e.style.display = '');
         f('wa-status', e => e.textContent = 'online');
         f('finger-cursor', e => { e.style.display = ''; e.style.animation = ''; e.style.opacity = '0'; });
+        // Reset music
+        f('birthday-music', e => { e.pause(); e.currentTime = 0; });
         currentScene = 0; updateDots(0);
         document.getElementById('scene-0').classList.add('active');
         window.scrollTo({ top: 0, behavior: 'smooth' });
