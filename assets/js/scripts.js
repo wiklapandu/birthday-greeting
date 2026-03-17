@@ -38,7 +38,7 @@
 
         // Final
         document.getElementById('final-msg').textContent = CFG.finalMessage;
-        document.getElementById('final-footer').textContent = '— ' + CFG.finalFooter + ', ' + CFG.name + ' —';
+        document.getElementById('final-footer').textContent = '— ' + CFG.finalFooter + ', ' + (CFG.shortCallName ||CFG.name) + ' —';
         document.getElementById('replay-btn').textContent = CFG.replayLabel;
 
         // Build scene 2 HTML (letter reveal)
